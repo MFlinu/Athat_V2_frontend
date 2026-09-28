@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream-50: #FAFAF8;
+  --color-cream-100: #F5F4EF;
+  --color-emerald-900: #0D5C4C;
+  --color-emerald-700: #147864;
+  --color-gold-500: #C9A961;
+  --color-gold-300: #D9BF84;
+  --color-ink-900: #1A1A1A;
+  --color-ink-700: #4A4A4A;
+  --color-ink-500: #7A7A7A;
+  --font-arabic: var(--font-tajawal), sans-serif;
+  --font-display: var(--font-amiri), serif;
+  --shadow-soft: 0 2px 15px -3px rgba(13, 92, 76, 0.08), 0 10px 20px -2px rgba(13, 92, 76, 0.04);
+}
+
+@layer base {
+  html, body { @apply overflow-x-hidden max-w-full; margin: 0; padding: 0; }
+  body { @apply bg-cream-50 text-ink-900 antialiased; }
+  h1, h2, h3, h4, h5, h6 { @apply font-display; }
+}
+
+@layer utilities {
+  .touch-target { min-height: 44px; min-width: 44px; }
+}
+
+html { scroll-behavior: smooth; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; line-height: 1.3; }
+  h2 { font-size: 1.6rem; }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: rgba(13, 92, 76, 0.3); border-radius: 999px; }
